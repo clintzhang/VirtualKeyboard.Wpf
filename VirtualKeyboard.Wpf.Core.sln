@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30804.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualKeyboard.Wpf", "VirtualKeyboard.Wpf\VirtualKeyboard.Wpf.csproj", "{EDD5A854-ABD0-4C1C-8764-56BE6BF1912E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualKeyboard.Wpf.Core", "VirtualKeyboard.Wpf.Core\VirtualKeyboard.Wpf.Core.csproj", "{EDD5A854-ABD0-4C1C-8764-56BE6BF1912E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VritualKeyboard.Wpf.Sample", "VritualKeyboard.Wpf.Sample\VritualKeyboard.Wpf.Sample.csproj", "{C9CC95F2-A006-4438-8C87-A465B7EBABDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VritualKeyboard.Wpf.Sample", "VritualKeyboard.Wpf.Sample\VritualKeyboard.Wpf.Sample.csproj", "{C9CC95F2-A006-4438-8C87-A465B7EBABDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -4,23 +4,19 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Data;
-using VirtualKeyboard.Wpf.Types;
-using VirtualKeyboard.Wpf.Views;
+using System.Windows.Documents;
 
-namespace VirtualKeyboard.Wpf.Converters
+namespace VirtualKeyboard.Wpf.Core.Converters
 {
-    class KeyboardTypeConverter : IValueConverter
+    class UppercaseTypographyConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var type = (KeyboardType)value;
-            switch (type)
-            {
-                case KeyboardType.Alphabet: return new AlphabetView();
-                case KeyboardType.Special: return new SpecialCharactersView();
-            }
-            return null;
+            bool uppercase = (bool)value;
+            if (uppercase) return FontCapitals.AllSmallCaps;
+            else return FontCapitals.Normal;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

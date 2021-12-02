@@ -1,4 +1,4 @@
-# VirtualKeyboard.Wpf
+# VirtualKeyboard.Wpf.Core
 ![look](look.png)
 Virtual keyboard for wpf - designed to be used in kiosk-like applications
 
@@ -8,7 +8,7 @@ Add style file to your main App.xaml resources
 <Application.Resources>
 	<ResourceDictionary>
 		<ResourceDictionary.MergedDictionaries>
-			<ResourceDictionary Source="pack://application:,,,/VirtualKeyboard.Wpf;component/ResourceDictionaries/DefaultStyles.xaml"/>
+			<ResourceDictionary Source="pack://application:,,,/VirtualKeyboard.Wpf.Core;component/ResourceDictionaries/DefaultStyles.xaml"/>
 		</ResourceDictionary.MergedDictionaries>
 	</ResourceDictionary>
 </Application.Resources>
@@ -32,12 +32,12 @@ Now every time you click on any TextBox - keyboard dialog will showup with defau
 You can create your own style resource file and add it instead of a default one.
 Additionaly you can specify your own Keyboard host window. Just create a new window with two ** ContentControl **controls - similar to DefaultKeyboardHost:
 ```
-<Window x:Class="VirtualKeyboard.Wpf.DefaultKeyboardHost"
+<Window x:Class="VirtualKeyboard.Wpf.Core.DefaultKeyboardHost"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:VirtualKeyboard.Wpf"
+        xmlns:local="clr-namespace:VirtualKeyboard.Wpf.Core"
         mc:Ignorable="d"
         WindowState="Maximized" ShowInTaskbar="False" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True">
     <Window.Background>

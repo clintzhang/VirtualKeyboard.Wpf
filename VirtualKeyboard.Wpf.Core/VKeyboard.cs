@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using VirtualKeyboard.Wpf.Controls;
-using VirtualKeyboard.Wpf.ViewModels;
-using VirtualKeyboard.Wpf.Views;
+using VirtualKeyboard.Wpf.Core.Controls;
+using VirtualKeyboard.Wpf.Core.ViewModels;
+using VirtualKeyboard.Wpf.Core.Views;
 
-namespace VirtualKeyboard.Wpf
+namespace VirtualKeyboard.Wpf.Core
 {
     public static class VKeyboard
     {
@@ -30,7 +30,7 @@ namespace VirtualKeyboard.Wpf
             else throw new ArgumentException();
         }
 
-        public static void Listen<T>(Expression<Func<T, string>> property) where T: UIElement
+        public static void Listen<T>(Expression<Func<T, string>> property) where T : UIElement
         {
             EventManager.RegisterClassHandler(typeof(T), UIElement.PreviewMouseLeftButtonDownEvent, (RoutedEventHandler)(async (s, e) =>
             {

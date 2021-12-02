@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace VirtualKeyboard.Wpf
+namespace VirtualKeyboard.Wpf.Core
 {
     class Command : ICommand
     {

@@ -4,14 +4,16 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VirtualKeyboard.Wpf.Types;
+using VirtualKeyboard.Wpf.Core;
+using VirtualKeyboard.Wpf.Core.Types;
 
-namespace VirtualKeyboard.Wpf.ViewModels
+namespace VirtualKeyboard.Wpf.Core.ViewModels
 {
     class VirtualKeyboardViewModel : INotifyPropertyChanged
     {
         private string _keyboardText;
-        public string KeyboardText {
+        public string KeyboardText
+        {
             get => _keyboardText;
             set
             {
@@ -20,8 +22,9 @@ namespace VirtualKeyboard.Wpf.ViewModels
             }
         }
         private KeyboardType _keyboardType;
-        public KeyboardType KeyboardType {
-            get => _keyboardType; 
+        public KeyboardType KeyboardType
+        {
+            get => _keyboardType;
             private set
             {
                 _keyboardType = value;
@@ -96,7 +99,7 @@ namespace VirtualKeyboard.Wpf.ViewModels
             ChangeCasing = new Command(a => Uppercase = !Uppercase);
             RemoveCharacter = new Command(a =>
             {
-                if(!string.IsNullOrEmpty(SelectedValue))
+                if (!string.IsNullOrEmpty(SelectedValue))
                 {
                     RemoveSubstring(SelectedValue);
                 }

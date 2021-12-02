@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VirtualKeyboard.Wpf.Types
+namespace VirtualKeyboard.Wpf.Core.Types
 {
-    enum KeyboardType
+    enum UppercaseMode
     {
-        Alphabet,
-        Special
+        None,
+        FirstUpper,
+        AlwaysUpper
     }
 }
