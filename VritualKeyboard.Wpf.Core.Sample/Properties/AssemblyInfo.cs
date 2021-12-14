@@ -7,11 +7,11 @@ using System.Windows;
 // Ogólne informacje o zestawie są kontrolowane poprzez następujący 
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // powiązane z zestawem.
-[assembly: AssemblyTitle("VirtualKeyboard.Wpf.Core")]
+[assembly: AssemblyTitle("VritualKeyboard.Wpf.Sample")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("VirtualKeyboard.Wpf.Core")]
+[assembly: AssemblyProduct("VritualKeyboard.Wpf.Sample")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -31,13 +31,13 @@ using System.Windows;
 //[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
 
 
-[assembly:ThemeInfo(
+[assembly: ThemeInfo(
     ResourceDictionaryLocation.None, //gdzie znajdują się słowniki zasobów specyficznych dla motywów
-                             //(używane, jeśli nie można odnaleźć zasobu na stronie,
-                             // lub słowniki zasobów aplikacji)
+                                     //(używane, jeśli nie można odnaleźć zasobu na stronie,
+                                     // lub słowniki zasobów aplikacji)
     ResourceDictionaryLocation.SourceAssembly //gdzie znajduje się słownik zasobów ogólnych
-                                      //(używane, jeśli nie można odnaleźć zasobu na stronie,
-                                      // aplikacji lub słowników zasobów specyficznych dla motywów)
+                                              //(używane, jeśli nie można odnaleźć zasobu na stronie,
+                                              // aplikacji lub słowników zasobów specyficznych dla motywów)
 )]
 
 
@@ -51,5 +51,5 @@ using System.Windows;
 // Możesz określić wszystkie wartości lub użyć domyślnych numerów kompilacji i poprawki
 // przy użyciu symbolu „*”, tak jak pokazano poniżej:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.0.0.0")]
-[assembly: AssemblyFileVersion("0.1.0.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
