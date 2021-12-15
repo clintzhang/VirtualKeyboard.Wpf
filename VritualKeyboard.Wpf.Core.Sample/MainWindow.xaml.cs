@@ -8,7 +8,6 @@ namespace VritualKeyboard.Wpf.Core.Sample {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
-            VKeyboard.Config(typeof(Window1));
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e) {

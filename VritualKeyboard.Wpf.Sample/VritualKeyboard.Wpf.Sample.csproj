@@ -15,7 +15,16 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="ResourceDictionaries\DefaultStyles.xaml">
+    <Compile Update="DefaultKeyboardHost.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="ResourceDictionaries\CustomStyles.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DefaultKeyboardHost.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>

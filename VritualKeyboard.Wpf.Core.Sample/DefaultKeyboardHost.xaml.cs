@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace VritualKeyboard.Wpf.Core.Sample
 {
     /// <summary>
-    /// Window1.xaml 的交互逻辑
+    /// DefaultKeyboardHost.xaml 的交互逻辑
     /// </summary>
-    public partial class Window1 : Window
+    public partial class DefaultKeyboardHost : Window
     {
-        public Window1()
+        public DefaultKeyboardHost()
         {
             InitializeComponent();
         }

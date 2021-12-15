@@ -7,7 +7,9 @@
 		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
 		<Authors>clintzhang</Authors>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<AssemblyVersion>1.0.1.0</AssemblyVersion>
+		<Version>1.0.2</Version>
+		<AssemblyVersion>1.0.2.0</AssemblyVersion>
+		<FileVersion>1.0.2.0</FileVersion>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />

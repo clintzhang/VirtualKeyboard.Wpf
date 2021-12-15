@@ -7,7 +7,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <!--<ResourceDictionary Source="pack://application:,,,/VirtualKeyboard.Wpf.Core;component/ResourceDictionaries/DefaultStyles.xaml"/>-->
-                <ResourceDictionary Source="pack://application:,,,/ResourceDictionaries/DefaultStyles.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ResourceDictionaries/CustomStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

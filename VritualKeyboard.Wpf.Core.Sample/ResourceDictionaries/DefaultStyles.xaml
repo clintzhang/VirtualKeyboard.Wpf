@@ -3,9 +3,10 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <SolidColorBrush x:Key="KeyboardBackgroundBrush" Color="BlueViolet"/>
     <SolidColorBrush x:Key="KeyboardBackgroundAccentBrush" Color="Chartreuse"/>
+    <SolidColorBrush x:Key="KeyboardValueBackgroundAccentBrush" Color="Chartreuse"/>
     <SolidColorBrush x:Key="KeyboardForegroundBrush" Color="White"/>
     <sys:Double x:Key="KeyboardIconSize">50</sys:Double>
-    <!--<SolidColorBrush x:Key="UppercaseBrush" Color="#FF006DA0"/>-->
+    <SolidColorBrush x:Key="UppercaseBrush" Color="#00A7E1"/>
 
     <Style x:Key="KeyboardButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
         <Setter Property="FontSize" Value="30"/>
@@ -16,46 +17,6 @@
         <Setter Property="Margin" Value="5" />
         <Setter Property="Height" Value="Auto"/>
         <Setter Property="Width" Value="Auto" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Grid Cursor="Hand">
-                        <Border x:Name="_Border" CornerRadius="20" Background="{TemplateBinding Background}"
-                      BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
-                            <!--<Border.Background >
-                  <SolidColorBrush Color="#35A3DD"></SolidColorBrush>
-                </Border.Background>-->
-                        </Border>
-                        <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}"
-                                ContentStringFormat="{TemplateBinding ContentStringFormat}"
-                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                Margin="{TemplateBinding Padding}" RecognizesAccessKey="True"
-                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <!--<Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Background" TargetName="_Border">
-                  <Setter.Value>#C1C1C1</Setter.Value>
-                </Setter>
-              </Trigger>
-              <Trigger Property="IsPressed" Value="True">
-                <Setter Property="UIElement.Effect">
-                  <Setter.Value>
-                    <DropShadowEffect BlurRadius="10"  Color="Red" Direction="720"  Opacity="0.6" RenderingBias="Performance" ShadowDepth="1" />
-                  </Setter.Value>
-                </Setter>
-                <Setter Property="Background" TargetName="_Border">
-                  <Setter.Value>#0770A7</Setter.Value>
-                </Setter>
-              </Trigger>-->
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Opacity" Value="0.6" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
     </Style>
 
     <Style x:Key="KeyboardCapsButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
@@ -67,46 +28,20 @@
         <Setter Property="Margin" Value="5" />
         <Setter Property="Height" Value="Auto"/>
         <Setter Property="Width" Value="Auto" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Grid Cursor="Hand">
-                        <Border x:Name="_Border" CornerRadius="20" Background="{TemplateBinding Background}"
-                      BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
-                            <!--<Border.Background >
-                  <SolidColorBrush Color="#35A3DD"></SolidColorBrush>
-                </Border.Background>-->
-                        </Border>
-                        <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}"
-                                ContentStringFormat="{TemplateBinding ContentStringFormat}"
-                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                Margin="{TemplateBinding Padding}" RecognizesAccessKey="True"
-                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <!--<Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Background" TargetName="_Border">
-                  <Setter.Value>#C1C1C1</Setter.Value>
-                </Setter>
-              </Trigger>
-              <Trigger Property="IsPressed" Value="True">
-                <Setter Property="UIElement.Effect">
-                  <Setter.Value>
-                    <DropShadowEffect BlurRadius="10"  Color="Red" Direction="720"  Opacity="0.6" RenderingBias="Performance" ShadowDepth="1" />
-                  </Setter.Value>
-                </Setter>
-                <Setter Property="Background" TargetName="_Border">
-                  <Setter.Value>#0770A7</Setter.Value>
-                </Setter>
-              </Trigger>-->
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Opacity" Value="0.6" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
+        <Style.Triggers>
+            <!--<Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="Red" />
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Foreground" Value="Gray" />
+            </Trigger>-->
+            <DataTrigger Binding="{Binding Uppercase}" Value="True">
+                <Setter Property="Foreground" Value="{StaticResource UppercaseBrush}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Uppercase}" Value="False">
+                <Setter Property="Foreground" Value="{StaticResource KeyboardForegroundBrush}" />
+            </DataTrigger>
+        </Style.Triggers>
     </Style>
 
     <Style x:Key="KeyboardRepeatButtonStyle" TargetType="{x:Type RepeatButton}" BasedOn="{StaticResource {x:Type RepeatButton}}">

@@ -7,11 +7,11 @@ using System.Windows;
 // Ogólne informacje o zestawie są kontrolowane poprzez następujący 
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // powiązane z zestawem.
-[assembly: AssemblyTitle("VritualKeyboard.Wpf.Sample")]
+[assembly: AssemblyTitle("VritualKeyboard.Wpf.Core.Sample")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("VritualKeyboard.Wpf.Sample")]
+[assembly: AssemblyProduct("VritualKeyboard.Wpf.Core.Sample")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

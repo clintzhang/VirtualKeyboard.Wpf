@@ -10,7 +10,7 @@
     <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.3.256001">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="VirtualKeyboard.Wpf.Core" Version="1.0.0" />
+    <PackageReference Include="VirtualKeyboard.Wpf.Core" Version="1.0.2" />
   </ItemGroup>
   <ItemGroup>
     <Page Update="ResourceDictionaries\DefaultStyles.xaml">
