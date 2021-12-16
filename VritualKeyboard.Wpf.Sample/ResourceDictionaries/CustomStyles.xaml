@@ -70,7 +70,18 @@
         <Setter Property="FontSize" Value="30"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Background" Value="{StaticResource KeyboardBackgroundBrush}"/>
-        <Setter Property="Foreground" Value="{StaticResource KeyboardForegroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource UppercaseBrush}"/>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="Width" Value="Auto" />
+    </Style>
+
+    <Style x:Key="KeyboardAcceptButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="{StaticResource KeyboardBackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource UppercaseBrush}"/>
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Margin" Value="5" />
         <Setter Property="Height" Value="Auto"/>
