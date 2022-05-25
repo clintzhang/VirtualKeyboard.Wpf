@@ -30,7 +30,7 @@ namespace VirtualKeyboard.Wpf.Core
             else throw new ArgumentException();
         }
 
-        public static void Listen<T>(Expression<Func<T, string>> property) where T : UIElement
+        public static void Listen<T>(Expression<Func<T, string>> property, bool isPassword = false, char passwordChar = '*') where T : UIElement
         {
             EventManager.RegisterClassHandler(typeof(T), UIElement.PreviewMouseLeftButtonDownEvent, (RoutedEventHandler)(async (s, e) =>
             {
@@ -40,18 +40,18 @@ namespace VirtualKeyboard.Wpf.Core
                 var prop = memberSelectorExpression.Member as PropertyInfo;
                 if (prop == null) return;
                 var initValue = (string)prop.GetValue(s);
-                var value = await OpenAsync(initValue);
+                var value = await OpenAsync(initValue, isPassword, passwordChar);
                 prop.SetValue(s, value, null);
             }));
         }
 
-        public static Task<string> OpenAsync(string initialValue = "")
+        public static Task<string> OpenAsync(string initialValue = "", bool isPassword = false, char passwordChar = '*')
         {
             if (_windowHost != null) throw new InvalidOperationException();
 
             _tcs = new TaskCompletionSource<string>();
             _windowHost = (Window)Activator.CreateInstance(_hostType);
-            _windowHost.DataContext = new VirtualKeyboardViewModel(initialValue);
+            _windowHost.DataContext = new VirtualKeyboardViewModel(initialValue, isPassword, passwordChar);
             ((ContentControl)_windowHost.FindName(_keyboardValueName)).Content = new KeyboardValueView();
             ((ContentControl)_windowHost.FindName(_keyboardName)).Content = new VirtualKeyboardView();
             void handler(object s, CancelEventArgs a)

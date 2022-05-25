@@ -22,6 +22,17 @@ namespace VirtualKeyboard.Wpf.Core.Controls {
         public AdvancedTextBox() {
             SelectionChanged += AdvancedTextBox_SelectionChanged;
             TextChanged += (s, e) => SetValue(TextValueProperty, Text);
+            DataObject.AddPastingHandler(this, OnPaste);
+        }
+
+        private static bool _isPasted = false;
+
+        private void OnPaste(object sender, DataObjectPastingEventArgs e) {
+            var isText = e.SourceDataObject.GetDataPresent(DataFormats.UnicodeText, true);
+            _isPasted = isText;
+            if (!isText) return;
+
+            var text = e.SourceDataObject.GetData(DataFormats.UnicodeText) as string;
         }
 
         public int CaretPosition {
@@ -63,6 +74,10 @@ namespace VirtualKeyboard.Wpf.Core.Controls {
             var caretPosition = s.CaretPosition;
             var value = e.NewValue as string;
             s.Text = value;
+            if (_isPasted) {
+                caretPosition = value.Length;
+                _isPasted = false;
+            }
             s.CaretIndex = caretPosition <= value.Length ? caretPosition : value.Length;
         }
     }

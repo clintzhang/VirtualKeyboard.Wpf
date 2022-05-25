@@ -1,16 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Text;
-using System.Threading.Tasks;
-using VirtualKeyboard.Wpf.Core;
 using VirtualKeyboard.Wpf.Core.Types;
 
 namespace VirtualKeyboard.Wpf.Core.ViewModels
 {
-    class VirtualKeyboardViewModel : INotifyPropertyChanged
-    {
+    class VirtualKeyboardViewModel : INotifyPropertyChanged {
+        private readonly char _passwordChar;
+        private readonly bool _isPassword;
+        private string _keyboardPwd;
+
+        public string KeyboardPwd {
+            get => _keyboardPwd;
+            set {
+                _keyboardPwd = value;
+                NotifyPropertyChanged(nameof(KeyboardPwd));
+            }
+        }
+
         private string _keyboardText;
         public string KeyboardText
         {
@@ -19,6 +25,9 @@ namespace VirtualKeyboard.Wpf.Core.ViewModels
             {
                 _keyboardText = value;
                 NotifyPropertyChanged(nameof(KeyboardText));
+                KeyboardPwd = _isPassword
+                    ? new StringBuilder().Append(_passwordChar, _keyboardText.Length).ToString()
+                    : _keyboardText;
             }
         }
         private KeyboardType _keyboardType;
@@ -54,6 +63,7 @@ namespace VirtualKeyboard.Wpf.Core.ViewModels
             }
         }
         private string _selectedValue;
+
         public string SelectedValue
         {
             get => _selectedValue;
@@ -69,12 +79,15 @@ namespace VirtualKeyboard.Wpf.Core.ViewModels
         public Command ChangeKeyboardType { get; }
         public Command Accept { get; }
 
-        public VirtualKeyboardViewModel(string initialValue)
+        public VirtualKeyboardViewModel(string initialValue, bool isPassword, char passwordChar)
         {
-            _keyboardText = initialValue;
+            _isPassword = isPassword;
+            _passwordChar = passwordChar;
+            KeyboardText = initialValue;
+
             _keyboardType = KeyboardType.Alphabet;
             _uppercase = false;
-            CaretPosition = _keyboardText.Length;
+            CaretPosition = KeyboardText.Length;
 
             AddCharacter = new Command(a =>
             {
