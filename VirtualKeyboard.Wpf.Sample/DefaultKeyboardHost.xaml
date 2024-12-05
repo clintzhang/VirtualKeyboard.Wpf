@@ -1,4 +1,4 @@
-﻿<Window x:Class="VritualKeyboard.Wpf.Core.Sample.DefaultKeyboardHost"
+﻿<Window x:Class="VirtualKeyboard.Wpf.Sample.DefaultKeyboardHost"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         mc:Ignorable="d"
         WindowState="Maximized" ShowInTaskbar="False" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True">
     <Window.Background>
-        <SolidColorBrush Opacity="0.5" Color="Aqua"/>
+        <SolidColorBrush Opacity="0" Color="Aqua"/>
     </Window.Background>
     <Grid>
         <Grid.RowDefinitions>

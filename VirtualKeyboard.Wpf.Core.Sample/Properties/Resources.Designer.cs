@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace VritualKeyboard.Wpf.Sample.Properties
+namespace VirtualKeyboard.Wpf.Sample.Properties
 {
     /// <summary>
     ///   Silnie typizowana klasa zasobów do wyszukiwania zlokalizowanych ciągów itd.

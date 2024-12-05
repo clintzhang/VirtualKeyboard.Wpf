@@ -1,7 +1,6 @@
 ﻿using System.Windows;
-using VirtualKeyboard.Wpf.Core;
 
-namespace VritualKeyboard.Wpf.Sample {
+namespace VirtualKeyboard.Wpf.Core.Sample {
     /// <summary>
     ///     Logika interakcji dla klasy MainWindow.xaml
     /// </summary>

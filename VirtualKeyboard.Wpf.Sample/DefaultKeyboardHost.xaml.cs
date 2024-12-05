@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace VritualKeyboard.Wpf.Sample
+namespace VirtualKeyboard.Wpf.Sample
 {
     /// <summary>
     /// Window1.xaml 的交互逻辑

@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using VirtualKeyboard.Wpf.Core;
 
-namespace VritualKeyboard.Wpf.Sample {
+namespace VirtualKeyboard.Wpf.Sample {
     /// <summary>
     ///     Logika interakcji dla klasy App.xaml
     /// </summary>

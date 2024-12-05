@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualKeyboard.Wpf.Core", "VirtualKeyboard.Wpf.Core\VirtualKeyboard.Wpf.Core.csproj", "{EDD5A854-ABD0-4C1C-8764-56BE6BF1912E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VritualKeyboard.Wpf.Sample", "VritualKeyboard.Wpf.Sample\VritualKeyboard.Wpf.Sample.csproj", "{C9CC95F2-A006-4438-8C87-A465B7EBABDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualKeyboard.Wpf.Core.Sample", "VirtualKeyboard.Wpf.Core.Sample\VirtualKeyboard.Wpf.Core.Sample.csproj", "{C16F4DE2-9580-4DBF-8635-96C7A84DA11F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VritualKeyboard.Wpf.Core.Sample", "VritualKeyboard.Wpf.Core.Sample\VritualKeyboard.Wpf.Core.Sample.csproj", "{35F30DD7-3EE6-4D44-91D9-AF508EF1FF95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualKeyboard.Wpf.Sample", "VirtualKeyboard.Wpf.Sample\VirtualKeyboard.Wpf.Sample.csproj", "{2FD444CE-7E82-44AF-A0D2-F80A627F8201}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{EDD5A854-ABD0-4C1C-8764-56BE6BF1912E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDD5A854-ABD0-4C1C-8764-56BE6BF1912E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDD5A854-ABD0-4C1C-8764-56BE6BF1912E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C9CC95F2-A006-4438-8C87-A465B7EBABDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9CC95F2-A006-4438-8C87-A465B7EBABDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9CC95F2-A006-4438-8C87-A465B7EBABDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C9CC95F2-A006-4438-8C87-A465B7EBABDF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{35F30DD7-3EE6-4D44-91D9-AF508EF1FF95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35F30DD7-3EE6-4D44-91D9-AF508EF1FF95}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35F30DD7-3EE6-4D44-91D9-AF508EF1FF95}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35F30DD7-3EE6-4D44-91D9-AF508EF1FF95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C16F4DE2-9580-4DBF-8635-96C7A84DA11F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C16F4DE2-9580-4DBF-8635-96C7A84DA11F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C16F4DE2-9580-4DBF-8635-96C7A84DA11F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C16F4DE2-9580-4DBF-8635-96C7A84DA11F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FD444CE-7E82-44AF-A0D2-F80A627F8201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FD444CE-7E82-44AF-A0D2-F80A627F8201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FD444CE-7E82-44AF-A0D2-F80A627F8201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FD444CE-7E82-44AF-A0D2-F80A627F8201}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
