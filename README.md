@@ -26,18 +26,26 @@ Just add (preferably in App.xaml startup event)
 VKeyboard.Listen<TextBox>(e => e.Text);
 ```
 Now every time you click on any TextBox - keyboard dialog will showup with default value of Text property, and will automatically assign new value.
-** Hint ** You can combine it with checking for touch devices, so it will only listen when there is an available touch device.
+**Hint** You can combine it with checking for touch devices, so it will only listen when there is an available touch device.
+
+### Password input
+Both `OpenAsync` and `Listen` accept optional parameters to switch the keyboard into password mode. Entered characters are then masked with `passwordChar` (default `*`):
+```
+var password = await VKeyboard.OpenAsync(isPassword: true);
+```
+```
+VKeyboard.Listen<TextBox>(e => e.Text, isPassword: true, passwordChar: '•');
+```
 
 ## Custom styling
 You can create your own style resource file and add it instead of a default one.
-Additionaly you can specify your own Keyboard host window. Just create a new window with two ** ContentControl **controls - similar to DefaultKeyboardHost:
+Additionaly you can specify your own Keyboard host window. Just create a new window with two **ContentControl** controls - similar to DefaultKeyboardHost (replace `x:Class` with your own namespace and class):
 ```
-<Window x:Class="VirtualKeyboard.Wpf.Core.DefaultKeyboardHost"
+<Window x:Class="YourApp.DefaultKeyboardHost"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:VirtualKeyboard.Wpf.Core"
         mc:Ignorable="d"
         WindowState="Maximized" ShowInTaskbar="False" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True">
     <Window.Background>
